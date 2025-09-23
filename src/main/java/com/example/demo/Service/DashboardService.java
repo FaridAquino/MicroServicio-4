@@ -30,7 +30,7 @@ public class DashboardService {
         List<DashboardData> prev = new ArrayList<>();
         for (TopGlobalEmailDTO tupla : tuplas) {
             DashboardData savedData = new DashboardData();
-            savedData.setAdminId(tupla.getAdminId());
+            savedData.setAdminId(tupla.getAdminId());   
             savedData.setUsedHashTag(tupla.getUsedHashTag());
             savedData.setDatePosted(tupla.getDatePosted());
             savedData.setUsernameTiktokAccount(tupla.getUsernameTiktokAccount());
