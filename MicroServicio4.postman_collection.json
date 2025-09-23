@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "ef307e7d-6fe3-45ec-adcf-1f53d61f587a",
+		"name": "MicroServicio4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43498940",
+		"_collection_link": "https://dream-team-9392.postman.co/workspace/Woekspace-prueba~ade26bf5-a77c-4012-940b-75ea578584ba/collection/43498940-ef307e7d-6fe3-45ec-adcf-1f53d61f587a?action=share&source=collection_link&creator=43498940"
+	},
+	"item": [
+		{
+			"name": "postDashboard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"adminId\": 1,\r\n    \"usedHashTag\": \"#SpringBoot\",\r\n    \"postId\": \"abc123\",\r\n    \"datePosted\": \"2025-09-01\",\r\n    \"usernameTiktokAccount\": \"dev_master\",\r\n    \"postURL\": \"https://www.tiktok.com/@dev_master/video/abc123\",\r\n    \"views\": 1000,\r\n    \"likes\": 250,\r\n    \"engagement\": 0.25\r\n  },\r\n  {\r\n    \"adminId\": 2,\r\n    \"usedHashTag\": \"#AITrends\",\r\n    \"postId\": \"xyz789\",\r\n    \"datePosted\": \"2025-08-15\",\r\n    \"usernameTiktokAccount\": \"ai_researcher\",\r\n    \"postURL\": \"https://www.tiktok.com/@ai_researcher/video/xyz789\",\r\n    \"views\": 5000,\r\n    \"likes\": 1200,\r\n    \"engagement\": 0.24\r\n  },\r\n  {\r\n    \"adminId\": 3,\r\n    \"usedHashTag\": \"#MusicVibes\",\r\n    \"postId\": \"mno456\",\r\n    \"datePosted\": \"2025-09-10\",\r\n    \"usernameTiktokAccount\": \"dj_wave\",\r\n    \"postURL\": \"https://www.tiktok.com/@dj_wave/video/mno456\",\r\n    \"views\": 20000,\r\n    \"likes\": 3000,\r\n    \"engagement\": 0.15\r\n  },\r\n  {\r\n    \"adminId\": 4,\r\n    \"usedHashTag\": \"#TravelLife\",\r\n    \"postId\": \"def321\",\r\n    \"datePosted\": \"2025-07-20\",\r\n    \"usernameTiktokAccount\": \"globetrotter\",\r\n    \"postURL\": \"https://www.tiktok.com/@globetrotter/video/def321\",\r\n    \"views\": 8000,\r\n    \"likes\": 2100,\r\n    \"engagement\": 0.26\r\n  },\r\n  {\r\n    \"adminId\": 5,\r\n    \"usedHashTag\": \"#Foodie\",\r\n    \"postId\": \"ghi654\",\r\n    \"datePosted\": \"2025-09-18\",\r\n    \"usernameTiktokAccount\": \"chef_delight\",\r\n    \"postURL\": \"https://www.tiktok.com/@chef_delight/video/ghi654\",\r\n    \"views\": 15000,\r\n    \"likes\": 5000,\r\n    \"engagement\": 0.33\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/admin/sendemail",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"sendemail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLast",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"adminId\": 1,\r\n    \"usedHashTag\": \"#SpringBoot\",\r\n    \"postId\": \"abc123\",\r\n    \"datePosted\": \"2025-09-01\",\r\n    \"usernameTiktokAccount\": \"dev_master\",\r\n    \"postURL\": \"https://www.tiktok.com/@dev_master/video/abc123\",\r\n    \"views\": 1000,\r\n    \"likes\": 250,\r\n    \"engagement\": 0.25\r\n  },\r\n  {\r\n    \"adminId\": 2,\r\n    \"usedHashTag\": \"#AITrends\",\r\n    \"postId\": \"xyz789\",\r\n    \"datePosted\": \"2025-08-15\",\r\n    \"usernameTiktokAccount\": \"ai_researcher\",\r\n    \"postURL\": \"https://www.tiktok.com/@ai_researcher/video/xyz789\",\r\n    \"views\": 5000,\r\n    \"likes\": 1200,\r\n    \"engagement\": 0.24\r\n  },\r\n  {\r\n    \"adminId\": 3,\r\n    \"usedHashTag\": \"#MusicVibes\",\r\n    \"postId\": \"mno456\",\r\n    \"datePosted\": \"2025-09-10\",\r\n    \"usernameTiktokAccount\": \"dj_wave\",\r\n    \"postURL\": \"https://www.tiktok.com/@dj_wave/video/mno456\",\r\n    \"views\": 20000,\r\n    \"likes\": 3000,\r\n    \"engagement\": 0.15\r\n  },\r\n  {\r\n    \"adminId\": 4,\r\n    \"usedHashTag\": \"#TravelLife\",\r\n    \"postId\": \"def321\",\r\n    \"datePosted\": \"2025-07-20\",\r\n    \"usernameTiktokAccount\": \"globetrotter\",\r\n    \"postURL\": \"https://www.tiktok.com/@globetrotter/video/def321\",\r\n    \"views\": 8000,\r\n    \"likes\": 2100,\r\n    \"engagement\": 0.26\r\n  },\r\n  {\r\n    \"adminId\": 5,\r\n    \"usedHashTag\": \"#Foodie\",\r\n    \"postId\": \"ghi654\",\r\n    \"datePosted\": \"2025-09-18\",\r\n    \"usernameTiktokAccount\": \"chef_delight\",\r\n    \"postURL\": \"https://www.tiktok.com/@chef_delight/video/ghi654\",\r\n    \"views\": 15000,\r\n    \"likes\": 5000,\r\n    \"engagement\": 0.33\r\n  }\r\n]"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/getDashboardInfo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"getDashboardInfo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
