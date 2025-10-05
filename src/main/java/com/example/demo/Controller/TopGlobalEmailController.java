@@ -22,13 +22,27 @@ public class TopGlobalEmailController {
     @Autowired
     private RemoteEmailService remoteEmailService;
 
-    //@PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/sendemail")
-    public ResponseEntity<String> sendEmail(@RequestBody List<TopGlobalEmailDTO> request) {
+    @PostMapping("/sendemail/{id}")
+    public ResponseEntity<String> sendEmail(
+            @PathVariable Long id,
+            @RequestBody List<TopGlobalEmailDTO> request,
+            @RequestHeader("Authorization") String authHeader) {
+
+        // Extraer el token sin el "Bearer "
+        String jwtToken = authHeader.replace("Bearer ", "");
+
+        // Obtener el rol desde el microservicio de cuentas
+        String role = remoteEmailService.getUserRole(id, jwtToken);
+
+        if (role == null || !role.equalsIgnoreCase("ADMIN")) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                    .body("🚫 Forbidden: Only admins can send emails.");
+        }
+
         dashboardService.publishData(request);
-        //String response = remoteEmailService.sendTopGlobalEmail(request); Como todavía no funciona lo voy a comentar
-        //topGlobalEmailService.sendTopGlobalTextEmail(request);
-        return ResponseEntity.status(HttpStatus.OK).body("✅ Top daily global emails have been sent successfully and has been published\"");
+
+        return ResponseEntity.ok("✅ Emails sent and data published successfully.");
     }
+
 
 }
