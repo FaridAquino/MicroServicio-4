@@ -23,4 +23,9 @@ public class GetDashboardPageController {
         List<TopGlobalEmailDTO> dto = dashboardService.getData();
         return ResponseEntity.status(HttpStatus.OK).body(dto);
     }
+
+    @GetMapping("/health")
+    public ResponseEntity<String> healthCheck() {
+        return ResponseEntity.ok("OK");
+    }
 }
