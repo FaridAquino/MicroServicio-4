@@ -25,6 +25,9 @@ public class DashboardService {
 
     public String publishData(List<TopGlobalEmailDTO> tuplas) {
         DashboardPublishedData dataset = new DashboardPublishedData();
+
+        System.out.println("📌 Nuevo DashboardPublishedData ID: " + dataset.getId());
+
         dataset = dashboardPublicationRepository.save(dataset);
 
         List<DashboardData> prev = new ArrayList<>();

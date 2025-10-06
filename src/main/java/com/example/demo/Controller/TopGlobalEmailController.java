@@ -67,7 +67,7 @@ public class TopGlobalEmailController {
             @Parameter(description = "ID del administrador", required = true, example = "123")
             @PathVariable Long id,
             @Parameter(description = "Lista de datos de posts de TikTok para enviar por email", required = true)
-            @RequestBody @Valid List<TopGlobalEmailDTO> request,
+            @RequestBody List<TopGlobalEmailDTO> request,
             @Parameter(description = "Token de autorización Bearer", required = true, example = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...")
             @RequestHeader("Authorization") String authHeader) {
 
